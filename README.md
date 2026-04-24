@@ -21,7 +21,7 @@ It is built with **React.js**, **Redux**, and **TailwindCSS**, and integrates wi
 ## Project Structure
 
 ```
-Back-Office/
+NexasLeads-Back-Office/
 ├── public/              
 │   └── index.html
 │
@@ -67,8 +67,8 @@ Back-Office/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nexasleadsofficial/Back-Office.git
-   cd Back-Office
+   git clone https://github.com/NexasLeads-Back-Office.git
+   cd NexasLeads-Back-Office
    ```
 
 2. **Install dependencies**
