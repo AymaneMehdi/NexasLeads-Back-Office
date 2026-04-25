@@ -67,7 +67,7 @@ NexasLeads-Back-Office/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/NexasLeads-Back-Office.git
+   git clone https://github.com/AymaneMehdi/NexasLeads-Back-Office.git
    cd NexasLeads-Back-Office
    ```
 
