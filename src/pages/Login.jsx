@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();  
     try {
-      const response = await fetch("", {
+      const response = await fetch(`${process.env.REACT_APP_LOGIN_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ function Login() {
         dispatch(loginSuccess(data.token));
         try {
           const token = data.token;
-          const response = await fetch('', {
+          const response = await fetch(`${process.env.REACT_APP_AUTH_URL}`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`

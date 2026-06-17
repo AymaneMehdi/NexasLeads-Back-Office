@@ -1,7 +1,7 @@
 import axios from 'axios';
 const addBlog = async (blogData) => {
   try {
-    const response = await axios.post('', blogData);
+    const response = await axios.post(`${process.env.REACT_APP_BLOGS_URL}`, blogData);
     return response.data;
   } catch (error) {
     console.error('Request payload:', blogData);
@@ -11,7 +11,7 @@ const addBlog = async (blogData) => {
 };
 const getBlogs = async () => {
   try {
-    const response = await axios.get(''); 
+    const response = await axios.get(`${process.env.REACT_APP_BLOGS_URL}`); 
     return response.data; 
   } catch (error) {
     console.error('Error fetching blogs:', error);
@@ -20,7 +20,7 @@ const getBlogs = async () => {
 };
 const getBlogById = async (blogId) => {
   try {
-    const response = await axios.get(``); 
+    const response = await axios.get(`${process.env.REACT_APP_BLOGS_URL}/${blogId}`);
     return response.data; 
   } catch (error) {
     console.error('Error fetching blog by ID:', error);
@@ -29,7 +29,7 @@ const getBlogById = async (blogId) => {
 };
 const updateBlog = async (blogId, updatedBlogData) => {
   try {
-    const response = await axios.put(``, updatedBlogData); 
+    const response = await axios.put(`${process.env.REACT_APP_BLOGS_URL}/${blogId}`, updatedBlogData); 
     return response.data; 
   } catch (error) {
     console.error('Error updating blog:', error);
@@ -38,7 +38,7 @@ const updateBlog = async (blogId, updatedBlogData) => {
 };
 const deleteBlog = async (blogId) => {
   try {
-    const response = await axios.delete(``); 
+    const response = await axios.delete(`${process.env.REACT_APP_BLOGS_URL}/${blogId}`);
     return response.data; 
   } catch (error) {
     console.error('Error deleting blog:', error);

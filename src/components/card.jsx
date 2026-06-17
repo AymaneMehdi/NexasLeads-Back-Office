@@ -10,7 +10,7 @@ function Card() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("");
+        const response = await axios.get(`${process.env.REACT_APP_STATISTICS_URL}`);
         setStatistics(response.data);
       } catch (error) {
         console.log(error);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 const addUser = async (userData) => {
   try {
-    const response = await axios.post('', userData); 
+    const response = await axios.post(`${process.env.REACT_APP_USERS_URL}`, userData); 
     return response.data; 
   } catch (error) {
     console.error('Error registering user:', error);
@@ -10,7 +10,7 @@ const addUser = async (userData) => {
 };
 const getUsers = async () => {
   try {
-    const response = await axios.get(''); 
+    const response = await axios.get(`${process.env.REACT_APP_USERS_URL}`); 
     return response.data; 
   } catch (error) {
     console.error('Error fetching users:', error);
@@ -19,7 +19,7 @@ const getUsers = async () => {
 };
 const getUserById = async (userId) => {
   try {
-    const response = await axios.get(``); 
+    const response = await axios.get(`${process.env.REACT_APP_USERS_URL}/${userId}`);
     return response.data; 
   } catch (error) {
     console.error('Error fetching user by ID:', error);
@@ -28,7 +28,7 @@ const getUserById = async (userId) => {
 };
 const updateUser = async (userId, updatedUserData) => {
   try {
-    const response = await axios.put(``, updatedUserData); 
+    const response = await axios.put(`${process.env.REACT_APP_USERS_URL}/${userId}`, updatedUserData); 
     return response.data; 
   } catch (error) {
     console.error('Error updating user:', error);
@@ -37,7 +37,7 @@ const updateUser = async (userId, updatedUserData) => {
 };
 const deleteUser = async (userId) => {
   try {
-    const response = await axios.delete(``); 
+    const response = await axios.delete(`${process.env.REACT_APP_USERS_URL}/${userId}`);
     return response.data; 
   } catch (error) {
     console.error('Error deleting user:', error);

@@ -20,7 +20,7 @@ function CombinedComponent() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("");
+        const response = await axios.get(`${process.env.REACT_APP_STATISTICS_URL}`);
         const { userCount, blogCount } = response.data;
         
         setStatistics({
